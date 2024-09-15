@@ -14,9 +14,17 @@ export default function Card({recipe}) {
   
   return (
     <div className='recipe-card'>
-      <img src="" alt={recipe.label} />
+      <img src={recipe.image} alt={recipe.label} />
       <h2>{recipe.label}</h2>
-      <a href="#top" className='button'>To recipe</a>
+
+      {recipe.cuisineType && recipe.cuisineType?.map(item => {
+          return <div>{item}</div>
+        })}
+      
+      <a href={recipe.url} className='button'>To recipe</a>
+
+      <div className='recipe-health'>{recipe.healthLabels.join(", ")}</div>
+
     </div>
   )
 }
