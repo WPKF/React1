@@ -15,10 +15,10 @@ export default function Card({recipe}) {
   return (
     <div className='recipe-card'>
       <img src={recipe.image} alt={recipe.label} />
-      <h2>{recipe.label}</h2>
+      <h2 className='title'>{recipe.label}</h2>
 
       {recipe.cuisineType && recipe.cuisineType?.map(item => {
-          return <div>{item}</div>
+          return <div className='cuisineType'>{item}</div>
         })}
       
       <a href={recipe.url} className='button'>To recipe</a>

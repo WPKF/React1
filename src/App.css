@@ -79,4 +79,14 @@ body {
 
 .recipe-health {
   font-size: x-small;
+  margin-top: 10px;
+}
+
+.title {
+  margin-bottom: 0px;
+}
+
+.cuisineType {
+  margin-bottom: 10px;
+  font-style: italic;
 }
